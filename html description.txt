@@ -1,0 +1,19 @@
+<mat-grid-list> // Main grid container  
+  // divides structure in small chunks  
+  <mat-grid-tile *ngFor="let card of cards" [colspan]="card.cols" [rowspan]="card.rows">  
+    // Every chunks acts as card component  
+    <mat-card class="dashboard-card">  
+      // Card Header  
+      <mat-card-header>  
+        <mat-card-title>  
+          <mat-menu #menu="matMenu" xPosition="before">  
+          </mat-menu>  
+        </mat-card-title>  
+      </mat-card-header>  
+      // Content of Card  
+      <mat-card-content class="dashboard-card-content">  
+        <div>Card Content Here</div>  
+      </mat-card-content>  
+    </mat-card>  
+  </mat-grid-tile>  
+</mat-grid-list>
